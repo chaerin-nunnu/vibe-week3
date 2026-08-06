@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>채린의 J-POP/J-ROCK 팬 페이지</title>
+  <title>J-ROCK/J-POP | 채린</title>
   <style>
     body {
       margin: 0;
@@ -25,7 +25,7 @@
       border-radius: 20px;
       padding: 40px 32px;
       width: 100%;
-      max-width: 380px;
+      max-width: 460px;
       text-align: center;
       border: 3px solid #ff2e93;
       box-shadow:
@@ -44,17 +44,19 @@
     }
 
     h1 {
-      margin: 22px 0 6px;
+      margin: 22px 0 4px;
       color: #ffdd00;
-      font-size: 28px;
+      font-size: 30px;
       letter-spacing: 1px;
       text-shadow: 2px 2px 0 #ff2e93;
     }
 
     .intro {
-      color: #c9bfe0;
-      font-size: 14px;
-      margin-bottom: 26px;
+      color: #00e0ff;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin: 0 0 26px;
     }
 
     section {
@@ -140,6 +142,57 @@
       font-size: 12px;
       white-space: nowrap;
     }
+
+    .pick-desc {
+      color: #c9bfe0;
+      font-size: 13px;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+
+    .lyric-quote {
+      background: #1c1826;
+      border-left: 4px solid #ffdd00;
+      border-radius: 10px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .lyric-stanza {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed #3a3250;
+    }
+
+    .lyric-stanza:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .lyric-jp {
+      margin: 0;
+      color: #e8e2f5;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .lyric-pron {
+      margin: 3px 0 0;
+      color: #00e0ff;
+      font-size: 11px;
+      letter-spacing: 0.3px;
+    }
+
+    .lyric-kr {
+      margin: 2px 0 0;
+      color: #ff9ec7;
+      font-size: 12px;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -149,35 +202,141 @@
       alt="채린의 프로필 아바타 일러스트"
       src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' fill='%23ff2e93'/><circle cx='60' cy='48' r='24' fill='%23ffdd00'/><circle cx='60' cy='120' r='40' fill='%23ffdd00'/></svg>"
     >
-    <h1>채린</h1>
-    <p class="intro">J-POP과 J-ROCK에 푹 빠져 사는 팬이에요 🎧🔥</p>
+    <h1>채린 ♪</h1>
+    <p class="intro">J-ROCK × J-POP 올인</p>
 
     <section aria-labelledby="fav-artist-heading">
       <h2 id="fav-artist-heading">🌟 최애 아티스트</h2>
       <div class="artist-card">
         <img
           class="artist-avatar"
-          alt="요네즈 켄시 캐릭터 아이콘"
+          alt="Eve 캐릭터 아이콘"
           src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' fill='%2300e0ff'/><circle cx='24' cy='19' r='10' fill='%23ffdd00'/><circle cx='24' cy='48' r='16' fill='%23ffdd00'/></svg>"
         >
         <div>
-          <p class="artist-name">요네즈 켄시 (米津玄師)</p>
-          <p class="artist-desc">독창적인 멜로디와 가사가 매력적인 싱어송라이터</p>
+          <p class="artist-name">Eve</p>
+          <p class="artist-desc">독특한 세계관의 애니메이션 MV로 유명한 싱어송라이터 겸 일러스트레이터</p>
+        </div>
+      </div>
+      <div class="artist-card" style="margin-top: 10px;">
+        <img
+          class="artist-avatar"
+          alt="키타니 타츠야 캐릭터 아이콘"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' fill='%23ffdd00'/><circle cx='24' cy='19' r='10' fill='%23ff2e93'/><circle cx='24' cy='48' r='16' fill='%23ff2e93'/></svg>"
+        >
+        <div>
+          <p class="artist-name">키타니 타츠야 (キタニタツヤ)</p>
+          <p class="artist-desc">감성적인 보컬과 록 사운드를 넘나드는 싱어송라이터</p>
+        </div>
+      </div>
+      <div class="artist-card" style="margin-top: 10px;">
+        <img
+          class="artist-avatar"
+          alt="나토리 캐릭터 아이콘"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' fill='%23ff2e93'/><circle cx='24' cy='19' r='10' fill='%2300e0ff'/><circle cx='24' cy='48' r='16' fill='%2300e0ff'/></svg>"
+        >
+        <div>
+          <p class="artist-name">나토리 (なとり)</p>
+          <p class="artist-desc">몽환적인 사운드와 목소리로 사랑받는 싱어송라이터</p>
         </div>
       </div>
     </section>
 
-    <section aria-labelledby="fav-band-heading">
-      <h2 id="fav-band-heading">🎸 최애 밴드</h2>
-      <div class="artist-card">
-        <img
-          class="artist-avatar"
-          alt="원 오크 록 밴드 로고 아이콘"
-          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' fill='%23ffdd00'/><circle cx='24' cy='19' r='10' fill='%23ff2e93'/><circle cx='24' cy='48' r='16' fill='%23ff2e93'/></svg>"
-        >
-        <div>
-          <p class="artist-name">ONE OK ROCK</p>
-          <p class="artist-desc">일본과 세계를 넘나드는 에너지 넘치는 록 사운드</p>
+    <section aria-labelledby="song-pick-heading">
+      <h2 id="song-pick-heading">🎶 이 곡 추천해요</h2>
+      <p class="pick-desc">
+        키타니 타츠야의 <strong style="color:#ffdd00;">Cinnamon</strong> —
+        나른한 아침의 권태와 사랑에 대한 예감을 씁쓸달콤하게 그려낸 곡이에요.
+        무심한 듯한 보컬 톤과 재지한 코드 진행이 묘하게 중독적이라 계속 듣게 돼요.
+      </p>
+      <div class="lyric-quote">
+        <div class="lyric-stanza">
+          <div>
+            <p class="lyric-jp">白いカーテンを透かすような</p>
+            <p class="lyric-pron">시로이 카-텐오 스카스 요-나</p>
+            <p class="lyric-kr">흰 커튼 뒤 비쳐 오는</p>
+          </div>
+          <div>
+            <p class="lyric-jp">朝の太陽が目蓋を引っ剥がして</p>
+            <p class="lyric-pron">아사노 타이요-가 마부타오 힉쿠하가시테</p>
+            <p class="lyric-kr">아침의 태양이 눈꺼풀을 뜨고</p>
+          </div>
+          <div>
+            <p class="lyric-jp">渇きと頭痛を癒すコーヒー</p>
+            <p class="lyric-pron">카와키토 즈츠-오 이야스 코-히-</p>
+            <p class="lyric-kr">갈증과 두통을 달래 주는 커피</p>
+          </div>
+          <div>
+            <p class="lyric-jp">おお、ありがとう</p>
+            <p class="lyric-pron">오- 아리가토-</p>
+            <p class="lyric-kr">오오, 고마워</p>
+          </div>
+        </div>
+        <div class="lyric-stanza">
+          <div>
+            <p class="lyric-jp">ところで君はどこの誰?</p>
+            <p class="lyric-pron">토코로데 키미와 도코노 다레</p>
+            <p class="lyric-kr">그런데 너는 어디의 누구?</p>
+          </div>
+          <div>
+            <p class="lyric-jp">この怠惰が創造的であらんと願う</p>
+            <p class="lyric-pron">코노 타이다가 소-조-테키데 아란토 네가우</p>
+            <p class="lyric-kr">이 나태함이 상상이길 바래</p>
+          </div>
+          <div>
+            <p class="lyric-jp">愛を飾る憎悪と死の予感</p>
+            <p class="lyric-pron">아이오 카자루 조-오토 시노 요칸</p>
+            <p class="lyric-kr">사랑을 장식하는 증오와 죽음의 예감</p>
+          </div>
+          <div>
+            <p class="lyric-jp">あぁ! なんて恐ろしい</p>
+            <p class="lyric-pron">아- 난테 오소로시-</p>
+            <p class="lyric-kr">아아! 정말이지 두려워</p>
+          </div>
+          <div>
+            <p class="lyric-jp">僕らは少し不幸せなだけなのにね</p>
+            <p class="lyric-pron">보쿠라와 스코시 후시아와세나 다케나노니네</p>
+            <p class="lyric-kr">우리는 조금 불행할 뿐인데 말이야</p>
+          </div>
+        </div>
+        <div class="lyric-stanza">
+          <div>
+            <p class="lyric-jp">湯上がりの首筋から</p>
+            <p class="lyric-pron">유아가리노 쿠비스지카라</p>
+            <p class="lyric-kr">목욕 후 목덜미에서</p>
+          </div>
+          <div>
+            <p class="lyric-jp">香った麝香の奥に</p>
+            <p class="lyric-pron">카옷타 자코-노 오쿠니</p>
+            <p class="lyric-kr">향기로운 사향의 깊은 곳에</p>
+          </div>
+          <div>
+            <p class="lyric-jp">少し覚えのある匂いがした</p>
+            <p class="lyric-pron">스코시 오보에노 아루 니오이가 시타</p>
+            <p class="lyric-kr">어디선가 맡아본 듯한 향기</p>
+          </div>
+          <div>
+            <p class="lyric-jp">愛をもっとくれないか</p>
+            <p class="lyric-pron">아이오 못토 쿠레나이카</p>
+            <p class="lyric-kr">사랑을 좀 더 줄 순 없을까</p>
+          </div>
+        </div>
+        <div class="lyric-stanza">
+          <div>
+            <p class="lyric-jp">苦くても構わないよ</p>
+            <p class="lyric-pron">니가쿠테모 카마와나이요</p>
+            <p class="lyric-kr">씁쓸한 맛이래도 상관없어</p>
+          </div>
+          <div>
+            <p class="lyric-jp">ささくれだった心には</p>
+            <p class="lyric-pron">사사쿠레닷타 코코로니와</p>
+            <p class="lyric-kr">갈라져 버린 마음에는</p>
+          </div>
+          <div>
+            <p class="lyric-jp">甘ったるい一匙のシナモンを</p>
+            <p class="lyric-pron">아맛타루이 히토사지노 시나몬오</p>
+            <p class="lyric-kr">달디 단 숟가락의 시나몬을</p>
+          </div>
         </div>
       </div>
     </section>
@@ -185,10 +344,9 @@
     <section aria-labelledby="fav-songs-heading">
       <h2 id="fav-songs-heading">💿 좋아하는 곡</h2>
       <ul>
-        <li><span class="song-title">Lemon</span><span class="song-artist">米津玄師</span></li>
-        <li><span class="song-title">Wherever you are</span><span class="song-artist">ONE OK ROCK</span></li>
-        <li><span class="song-title">KICK BACK</span><span class="song-artist">米津玄師</span></li>
-        <li><span class="song-title">The Beginning</span><span class="song-artist">ONE OK ROCK</span></li>
+        <li><span class="song-title">金木犀</span><span class="song-artist">나토리</span></li>
+        <li><span class="song-title">Sleepwalk</span><span class="song-artist">나토리</span></li>
+        <li><span class="song-title">アウトサイダー</span><span class="song-artist">Eve</span></li>
       </ul>
     </section>
   </div>
