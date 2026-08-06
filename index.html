@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>채린의 J-POP/J-ROCK 팬 페이지</title>
   <style>
     body {
       margin: 0;
@@ -9,38 +11,103 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #fce7f3, #dbeafe, #d1fae5);
+      padding: 40px 16px;
+      background: #17141f;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(255, 0, 153, 0.35), transparent 45%),
+        radial-gradient(circle at 85% 15%, rgba(0, 224, 255, 0.3), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(255, 221, 0, 0.2), transparent 50%);
       font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
     }
 
     .card {
-      background: #fffaf5;
-      border-radius: 28px;
-      padding: 40px 36px;
-      width: 320px;
+      background: #221d30;
+      border-radius: 20px;
+      padding: 40px 32px;
+      width: 100%;
+      max-width: 380px;
       text-align: center;
-      box-shadow: 0 12px 30px rgba(170, 150, 200, 0.25);
+      border: 3px solid #ff2e93;
+      box-shadow:
+        6px 6px 0 #00e0ff,
+        0 12px 40px rgba(0, 0, 0, 0.5);
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 116px;
+      height: 116px;
       border-radius: 50%;
       object-fit: cover;
-      border: 6px solid #fbcfe8;
-      background: #fef3c7;
+      border: 5px solid #ffdd00;
+      background: #2a2438;
+      box-shadow: 0 0 0 4px #17141f, 0 0 20px rgba(255, 46, 147, 0.5);
     }
 
     h1 {
-      margin: 20px 0 6px;
-      color: #7c5c8a;
-      font-size: 24px;
+      margin: 22px 0 6px;
+      color: #ffdd00;
+      font-size: 28px;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 0 #ff2e93;
     }
 
     .intro {
-      color: #9a8ca6;
+      color: #c9bfe0;
       font-size: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 26px;
+    }
+
+    section {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: #00e0ff;
+      font-size: 14px;
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .artist-card {
+      background: #2a2438;
+      border-left: 4px solid #ff2e93;
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .artist-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #3a3250;
+      flex-shrink: 0;
+      border: 2px solid #ffdd00;
+    }
+
+    .artist-name {
+      color: #ffdd00;
+      font-weight: bold;
+      font-size: 14px;
+      margin: 0 0 2px;
+    }
+
+    .artist-desc {
+      color: #c9bfe0;
+      font-size: 12px;
+      margin: 0;
     }
 
     ul {
@@ -49,32 +116,81 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
     li {
-      background: #e0f2fe;
-      color: #5b7c99;
-      border-radius: 14px;
+      background: #2a2438;
+      color: #e8e2f5;
+      border-radius: 10px;
       padding: 10px 14px;
       font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      border-left: 4px solid #00e0ff;
     }
 
-    li::before {
-      content: "🩵 ";
+    li .song-title::before {
+      content: "🎸 ";
+    }
+
+    li .song-artist {
+      color: #8d84a8;
+      font-size: 12px;
+      white-space: nowrap;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <img class="avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' fill='%23fde68a'/><circle cx='60' cy='48' r='24' fill='%23fff'/><circle cx='60' cy='120' r='40' fill='%23fff'/></svg>">
+    <img
+      class="avatar"
+      alt="채린의 프로필 아바타 일러스트"
+      src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' fill='%23ff2e93'/><circle cx='60' cy='48' r='24' fill='%23ffdd00'/><circle cx='60' cy='120' r='40' fill='%23ffdd00'/></svg>"
+    >
     <h1>채린</h1>
-    <p class="intro">코드와 커피를 함께 즐기는 개발자예요 ☕</p>
-    <ul>
-      <li>고양이</li>
-      <li>파스텔톤 디자인</li>
-      <li>주말 코딩</li>
-    </ul>
+    <p class="intro">J-POP과 J-ROCK에 푹 빠져 사는 팬이에요 🎧🔥</p>
+
+    <section aria-labelledby="fav-artist-heading">
+      <h2 id="fav-artist-heading">🌟 최애 아티스트</h2>
+      <div class="artist-card">
+        <img
+          class="artist-avatar"
+          alt="요네즈 켄시 캐릭터 아이콘"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' fill='%2300e0ff'/><circle cx='24' cy='19' r='10' fill='%23ffdd00'/><circle cx='24' cy='48' r='16' fill='%23ffdd00'/></svg>"
+        >
+        <div>
+          <p class="artist-name">요네즈 켄시 (米津玄師)</p>
+          <p class="artist-desc">독창적인 멜로디와 가사가 매력적인 싱어송라이터</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="fav-band-heading">
+      <h2 id="fav-band-heading">🎸 최애 밴드</h2>
+      <div class="artist-card">
+        <img
+          class="artist-avatar"
+          alt="원 오크 록 밴드 로고 아이콘"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' fill='%23ffdd00'/><circle cx='24' cy='19' r='10' fill='%23ff2e93'/><circle cx='24' cy='48' r='16' fill='%23ff2e93'/></svg>"
+        >
+        <div>
+          <p class="artist-name">ONE OK ROCK</p>
+          <p class="artist-desc">일본과 세계를 넘나드는 에너지 넘치는 록 사운드</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="fav-songs-heading">
+      <h2 id="fav-songs-heading">💿 좋아하는 곡</h2>
+      <ul>
+        <li><span class="song-title">Lemon</span><span class="song-artist">米津玄師</span></li>
+        <li><span class="song-title">Wherever you are</span><span class="song-artist">ONE OK ROCK</span></li>
+        <li><span class="song-title">KICK BACK</span><span class="song-artist">米津玄師</span></li>
+        <li><span class="song-title">The Beginning</span><span class="song-artist">ONE OK ROCK</span></li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>
