@@ -1,0 +1,57 @@
+name: Daily Hello
+
+on:
+  schedule:
+    # 매일 09:00 KST = 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-quote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 오늘의 한마디 갱신
+        run: |
+          python3 <<'EOF'
+          import random
+          import re
+
+          with open("quotes.txt", encoding="utf-8") as f:
+              quotes = [line.strip() for line in f if line.strip()]
+          quote = random.choice(quotes)
+          print(f"선택된 문구: {quote}")
+
+          with open("README.md", encoding="utf-8") as f:
+              content = f.read()
+
+          pattern = re.compile(
+              r"(<!-- daily-quote:start -->).*?(<!-- daily-quote:end -->)",
+              re.DOTALL,
+          )
+
+          def repl(match: re.Match) -> str:
+              return f"{match.group(1)}\n{quote}\n{match.group(2)}"
+
+          new_content = pattern.sub(repl, content)
+
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(new_content)
+          EOF
+
+      - name: 변경사항 커밋 및 푸시
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "변경 사항 없음, 커밋 생략"
+          else
+            git commit -m "docs: 오늘의 한마디 갱신"
+            git push
+          fi
