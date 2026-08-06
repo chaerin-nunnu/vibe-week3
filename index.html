@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #fce7f3, #dbeafe, #d1fae5);
+      font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+    }
+
+    .card {
+      background: #fffaf5;
+      border-radius: 28px;
+      padding: 40px 36px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(170, 150, 200, 0.25);
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fbcfe8;
+      background: #fef3c7;
+    }
+
+    h1 {
+      margin: 20px 0 6px;
+      color: #7c5c8a;
+      font-size: 24px;
+    }
+
+    .intro {
+      color: #9a8ca6;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    li {
+      background: #e0f2fe;
+      color: #5b7c99;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+
+    li::before {
+      content: "🩵 ";
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' fill='%23fde68a'/><circle cx='60' cy='48' r='24' fill='%23fff'/><circle cx='60' cy='120' r='40' fill='%23fff'/></svg>">
+    <h1>채린</h1>
+    <p class="intro">코드와 커피를 함께 즐기는 개발자예요 ☕</p>
+    <ul>
+      <li>고양이</li>
+      <li>파스텔톤 디자인</li>
+      <li>주말 코딩</li>
+    </ul>
+  </div>
+</body>
+</html>
